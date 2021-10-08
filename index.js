@@ -1,7 +1,16 @@
-var tableau = [];
+// var tableau = [];
 
-for (var i = 1; i < 6; i++){
-  tableau.push(i);
+// for (var i = 1; i < 6; i++){
+//   tableau.push(i);
+// }
+
+
+// console.log(tableau)
+
+function firstLancerOne(){
+  if(result = 1){
+      return 1
+  }
+  return 0
 }
-
-console.log(tableau)
+module.exports = firstLancerOne;
