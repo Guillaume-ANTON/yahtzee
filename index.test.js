@@ -32,7 +32,7 @@ const dataOne = [
     it(`le résultat ${one.rolls} correspond à ${one.result}`, () => {
       const result = firstLancerOne(one.rolls);
       // const result = firstLancerOne([1,2,3,4,5]);
-
+      const toto = 
       expect(result).toBe(one.result);
     });
   });
