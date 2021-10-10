@@ -1,4 +1,5 @@
 const lancerUn = require("./index")
+const lancerdeux = require("./index")
 
 // 1
 const dataOne = [
@@ -25,24 +26,24 @@ const dataOne = [
 
 // 2 
 
-// const dataTwo = [
-//   {
-//       rolls: [1, 2, 3, 4, 5],
-//       result : 2,
-//   },
-//   {
-//       rolls: [1, 3, 3, 4, 5],
-//       result: 0,
-//   },
-//   {
-//       rolls: [1, 2, 2, 4, 5],
-//       result: 4,
-//   }
-// ];
+const dataTwo = [
+  {
+      rolls: [1, 2, 3, 4, 5],
+      result : 2,
+  },
+  {
+      rolls: [1, 3, 3, 4, 5],
+      result: 0,
+  },
+  {
+      rolls: [1, 2, 2, 4, 5],
+      result: 4,
+  }
+];
 
-// describe.each(dataTwo)(`nombre de deux `, (one) => {
-//   it(`le résultat ${one.rolls} correspond à ${one.result}`, () => {
-//     const result = firstLancerTwo(two.rolls);
-//     expect(result).toBe(two.result);
-//   });
-// });
+describe.each(dataTwo)(`nombre de deux `, (two) => {
+  it(`le résultat ${two.rolls} correspond à ${two.result}`, () => {
+    const result = lancerdeux(two.rolls);
+    expect(result).toBe(two.result);
+  });
+});
