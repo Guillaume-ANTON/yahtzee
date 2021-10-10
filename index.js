@@ -43,6 +43,11 @@ module.exports ={
     return (data) => this.AllCalcule(rolls)(data) ? somme(data) : 0
   },
 
+  // Full
+  Full : function lacerfull() {
+    return (this.FunctionComplexe(d => d.count === 3) && (this.FunctionComplexe(d => d.count === 2)) ? 25 : 0)
+  },
+
 
 
 

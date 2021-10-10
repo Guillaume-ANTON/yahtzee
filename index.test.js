@@ -6,6 +6,7 @@ const lancercinq = require("./index")
 const lancersix = require("./index")
 const lancerbrellan = require("./index")
 const lancercarre = require("./index")
+const lancerfull = require("./index")
 
 // 1
 const dataOne = [
