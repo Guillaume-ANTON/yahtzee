@@ -38,6 +38,11 @@ module.exports ={
     return (data) => this.AllCalcule(rolls)(data) ? somme(data) : 0
   },
 
+  // Carré
+  Carre : function lancercarre(rolls) {
+    return (data) => this.AllCalcule(rolls)(data) ? somme(data) : 0
+  },
+
 
 
 
