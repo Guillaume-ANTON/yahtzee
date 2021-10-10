@@ -18,6 +18,11 @@ module.exports ={
     return this.FunctionSimple(rolls, 3)
   },
 
+  // Lancer 4
+  Four : function lancerquatre(rolls) {
+    return this.FunctionSimple(rolls, 4)
+  },
+
 
 
 
