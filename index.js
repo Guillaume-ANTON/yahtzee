@@ -33,6 +33,11 @@ module.exports ={
     return this.FunctionSimple(rolls, 6)
   },
 
+  // Brellan
+  Brellan : function lancerbrellan(rolls) {
+    return (data) => this.AllCalcule(rolls)(data) ? somme(data) : 0
+  },
+
 
 
 
@@ -40,4 +45,15 @@ module.exports ={
     let test = rolls.count(dice => dice == value);
     return value * test;
   },
+
+  FunctionComplexe : function complexe(rolls, value) {
+    return (data) => AllCalcule(data).somme(x => x.count >= rolls);
+  },
+
+  AllCalcule : function calcule(data) {
+    const array = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    data.forEach(indexDice => array[indexDice]++)
+    return Object.keys(array).map(val => {return {value: val, count: array[val]}})
+  }
+
 }

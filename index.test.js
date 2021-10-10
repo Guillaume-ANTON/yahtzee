@@ -4,6 +4,7 @@ const lancertrois = require("./index")
 const lancerquatre = require("./index")
 const lancercinq = require("./index")
 const lancersix = require("./index")
+const lancerbrellan = require("./index")
 
 // 1
 const dataOne = [
@@ -147,3 +148,27 @@ describe.each(dataSix)(`nombre de six `, (six) => {
     expect(result).toBe(six.result);
   });
 });
+
+// Brelan
+
+const dataBrelan = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 0,
+  },
+  {
+      rolls: [1, 1, 1, 2, 3],
+      result: 8,
+  },
+  {
+      rolls: [6, 6, 6, 2, 5],
+      result: 25,
+  }
+];
+
+describe.each(dataBrelan)(`Brellan`, (brellan) => {
+  it(`Score ${rolls} le nombre de point est de ${result}`, () => {
+    const result = lancerbrellan.Brellan(brellan.rolls);
+    expect(result).toBe(brellan.result);
+  })
+})
