@@ -1,5 +1,6 @@
 const lancerUn = require("./index")
 const lancerdeux = require("./index")
+const lancertrois = require("./index")
 
 // 1
 const dataOne = [
@@ -45,5 +46,29 @@ describe.each(dataTwo)(`nombre de deux `, (two) => {
   it(`le résultat ${two.rolls} correspond à ${two.result}`, () => {
     const result = lancerdeux.Two(two.rolls);
     expect(result).toBe(two.result);
+  });
+});
+
+// 3
+
+const dataThree = [
+  {
+      rolls: [1, 2, 3, 4, 5],
+      result : 3,
+  },
+  {
+      rolls: [1, 3, 3, 4, 5],
+      result: 6,
+  },
+  {
+      rolls: [1, 2, 2, 4, 5],
+      result: 0,
+  }
+];
+
+describe.each(dataThree)(`nombre de trois `, (three) => {
+  it(`le résultat ${three.rolls} correspond à ${three.result}`, () => {
+    const result = lancertrois.Three(three.rolls);
+    expect(result).toBe(three.result);
   });
 });
