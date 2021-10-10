@@ -1,24 +1,11 @@
-// var tableau = [];
-
-// for (var i = 1; i < 6; i++){
-//   tableau.push(i);
-// }
-
-
-// console.log(tableau)
-
-
 Array.prototype.count = function(predicate = obj => true) {
   return this.filter(predicate).length;
 };
 
-function firstLancerOne(rolls){
-  // if(rolls == 1){
-  //     return 1
-  // }
-  // return 0
+function lancerUn(rolls){
   return calculateNumber(rolls, 1)
 }
+
 
 
 function calculateNumber(rolls, value){
@@ -27,9 +14,4 @@ function calculateNumber(rolls, value){
   return value * test;
 }
 
-
-// function calculerLesLancer(){
-//   if()
-// }
-
-module.exports = firstLancerOne;
+module.exports = lancerUn;

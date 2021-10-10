@@ -1,18 +1,6 @@
-// describe('Mon super toto', function()  
-// {  
-// 	const cas1 = [1, 2, 3, 4 ,5]
+const lancerUn = require("./index")
 
-//     it("Il y a le chiffre 1", function()   
-//      {       	
-//         expect(fb.printNumbers()).toEqual(1);  
-//     });
-// });
-
-
-   
-// const firstLancerTwo = require("./index");
-const firstLancerOne = require("./index")
-
+// 1
 const dataOne = [
     {
         rolls: [1, 2, 3, 4, 5],
@@ -30,9 +18,31 @@ const dataOne = [
 
   describe.each(dataOne)(`nombre de un `, (one) => {
     it(`le résultat ${one.rolls} correspond à ${one.result}`, () => {
-      const result = firstLancerOne(one.rolls);
-      // const result = firstLancerOne([1,2,3,4,5]);
-      const toto = 
+      const result = lancerUn(one.rolls);
       expect(result).toBe(one.result);
     });
   });
+
+// 2 
+
+// const dataTwo = [
+//   {
+//       rolls: [1, 2, 3, 4, 5],
+//       result : 2,
+//   },
+//   {
+//       rolls: [1, 3, 3, 4, 5],
+//       result: 0,
+//   },
+//   {
+//       rolls: [1, 2, 2, 4, 5],
+//       result: 4,
+//   }
+// ];
+
+// describe.each(dataTwo)(`nombre de deux `, (one) => {
+//   it(`le résultat ${one.rolls} correspond à ${one.result}`, () => {
+//     const result = firstLancerTwo(two.rolls);
+//     expect(result).toBe(two.result);
+//   });
+// });
