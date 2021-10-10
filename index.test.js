@@ -8,6 +8,7 @@ const lancerbrellan = require("./index")
 const lancercarre = require("./index")
 const lancerfull = require("./index")
 const lancerchance = require("./index")
+const lanceryahtzee = require("./index")
 
 // 1
 const dataOne = [
@@ -286,15 +287,22 @@ describe.each(dataChance)(`Full`, ({rolls, result}) => {
 
 const dataYahtzee = [
   {
-      rolls: [1, 2, 3, 6, 5],
-      result : 0,
+    rolls: [1, 2, 1, 1, 1], 
+    result: 0,
   },
   {
-      rolls: [1, 1, 1, 1, 1],
-      result: 50,
+    rolls: [3, 3, 3, 3, 3], 
+    result: 50,
   },
   {
-      rolls: [6, 6, 6, 6, 6],
-      result: 50,
+    rolls: [6, 6, 6, 6, 6], 
+    result: 50,
   }
-];
+]
+
+describe.each(dataYahtzee)(`Yahtzee`, ({rolls, result}) => {
+  it(`Score ${rolls} le nombre de point est de ${result}`, () => {
+    const result = lanceryahtzee.Yahtzee('Yahtzee', rolls)
+    expect(result).toBe(result)
+  })
+})

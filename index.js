@@ -64,6 +64,9 @@ Chance : function lancerchance(){
 
   // Yahtzee
 
+Yahtzee : function lanceryahtzee() {
+  return this.FunctionComplexe(d => d.count === 5) ? 50 : 0
+},
 
   FunctionSimple : function calculateNumber(rolls, value){
     let test = rolls.count(dice => dice == value);
