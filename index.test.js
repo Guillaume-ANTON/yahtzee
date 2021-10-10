@@ -197,3 +197,95 @@ describe.each(dataCarre)(`Carré`, ({rolls, result}) => {
     expect(result).toBe(result);
   })
 })
+
+// Full
+
+const dataFull = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 0,
+  },
+  {
+      rolls: [1, 1, 1, 3, 3],
+      result: 25,
+  },
+  {
+      rolls: [6, 6, 6, 6, 5],
+      result:0,
+  }
+];
+
+describe.each(dataFull)(`Full`, ({rolls, result}) => {
+  it(`Score ${rolls} le nombre de point est de ${result}`, () => {
+    const result = lancerfull.Full('full', rolls)
+    expect(result).toBe(result);
+  });
+});
+
+// Petite Suite
+
+const dataSmall = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 0,
+  },
+  {
+      rolls: [1, 2, 3, 4, 3],
+      result: 30,
+  },
+  {
+      rolls: [1, 3, 4, 5, 6],
+      result: 30,
+  }
+];
+
+// Grande Suite
+
+const dataBig = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 0,
+  },
+  {
+      rolls: [1, 2, 3, 4, 5],
+      result: 40,
+  },
+  {
+      rolls: [2, 3, 4, 5, 6],
+      result: 40,
+  }
+];
+
+// Chance
+
+const dataChance = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 17,
+  },
+  {
+      rolls: [1, 1, 1, 1, 3],
+      result: 7,
+  },
+  {
+      rolls: [6, 6, 6, 6, 5],
+      result: 29,
+  }
+];
+
+// Yahtzee
+
+const dataYahtzee = [
+  {
+      rolls: [1, 2, 3, 6, 5],
+      result : 0,
+  },
+  {
+      rolls: [1, 1, 1, 1, 1],
+      result: 50,
+  },
+  {
+      rolls: [6, 6, 6, 6, 6],
+      result: 50,
+  }
+];
