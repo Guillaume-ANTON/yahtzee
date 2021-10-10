@@ -5,18 +5,18 @@ module.exports ={
 
   // Lancer 1
   One : function lancerUn(rolls){
-    return calculateNumber(rolls, 1)
+    return this.FunctionSimple(rolls, 1)
   },
 
   // Lancer 2
   Two : function lancerdeux(rolls) {
-    return calculateNumber(rolls, 2)
+    return this.FunctionSimple(rolls, 2)
   },
 
 
 
 
-  FunctionPrincipale : function calculateNumber(rolls, value){
+  FunctionSimple : function calculateNumber(rolls, value){
     let test = rolls.count(dice => dice == value);
     return value * test;
   },
