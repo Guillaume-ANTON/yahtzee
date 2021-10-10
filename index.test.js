@@ -7,6 +7,7 @@ const lancersix = require("./index")
 const lancerbrellan = require("./index")
 const lancercarre = require("./index")
 const lancerfull = require("./index")
+const lancerchance = require("./index")
 
 // 1
 const dataOne = [
@@ -273,6 +274,13 @@ const dataChance = [
       result: 29,
   }
 ];
+
+describe.each(dataChance)(`Full`, ({rolls, result}) => {
+  it(`Score ${rolls} le nombre de point est de ${result}`, () => {
+    const result = lancerchance.Chance('Chance', rolls)
+    expect(result).toBe(result)
+  })
+})
 
 // Yahtzee
 

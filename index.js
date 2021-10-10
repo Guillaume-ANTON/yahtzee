@@ -48,7 +48,21 @@ module.exports ={
     return (this.FunctionComplexe(d => d.count === 3) && (this.FunctionComplexe(d => d.count === 2)) ? 25 : 0)
   },
 
+  // Petite suite
 
+
+
+  // Grande suite
+
+
+
+  // Chance
+
+Chance : function lancerchance(){
+  return this.FunctionComplexe((current, previous) => previous+current,0)
+},
+
+  // Yahtzee
 
 
   FunctionSimple : function calculateNumber(rolls, value){
