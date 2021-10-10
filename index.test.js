@@ -166,9 +166,9 @@ const dataBrelan = [
   }
 ];
 
-describe.each(dataBrelan)(`Brellan`, (brellan) => {
+describe.each(dataBrelan)(`Brellan`, ({rolls, result}) => {
   it(`Score ${rolls} le nombre de point est de ${result}`, () => {
-    const result = lancerbrellan.Brellan(brellan.rolls);
-    expect(result).toBe(brellan.result);
+    const result = lancerbrellan.Brellan('brellan', rolls);
+    expect(result).toBe(result);
   })
 })
